@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 from tools.eratos_sieve import eratos_sieve
 import math
 

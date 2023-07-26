@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 def main():
     ans_list = multiple_finder(1000, 5, 3)
     print(ans_list)

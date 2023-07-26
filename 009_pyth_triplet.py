@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 def main():
     for b in range(500):
         a = 500*(1000-2*b)/(1000-b)

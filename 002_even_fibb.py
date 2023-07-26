@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 def main():
     flist = fibb_list_gen(4000000)
     is_even = lambda x : x % 2 == 0

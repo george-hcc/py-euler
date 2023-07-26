@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 def main():
     square = lambda x : x**2
     num_iter = range(1, 101)
