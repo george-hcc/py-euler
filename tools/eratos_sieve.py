@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 def main():
     prime_list = eratos_sieve(1000000)
     for prime in prime_list:
@@ -6,20 +8,18 @@ def main():
 # Sieve of Eratosthenes
 def eratos_sieve(max_prime):
     # Candidates list
-    cddts_list = [[integer, True] for integer in range(2, max_prime+1)]
-    prime_list = []
+    cddts_list = [True for integer in range(max_prime+1)]
+    cddts_list[0] = cddts_list[1] = False
 
     # Sieve Logic
-    for i, test_item in enumerate(cddts_list):
-        if test_item[1] == True:
-            prime_list.append(test_item[0])
-            j = test_item[0]
-            while i + j < len(cddts_list):
-                cddts_list[i + j][1] = False
-                j += test_item[0]
-            
+    p = 2
+    while (p*p <= max_prime):
+        if cddts_list[p] == True:
+            for i in range(p*p, max_prime+1, p):
+                cddts_list[i] = False
+        p += 1
     
-    return prime_list
+    return [n for n, boolean in enumerate(cddts_list) if boolean]
 
 if __name__== '__main__':
     main()
