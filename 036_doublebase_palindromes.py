@@ -4,7 +4,7 @@ pow2_map = {n:2**n for n in range(20)}
 
 def main(upper_limit):
     solution_set = set()
-    for n in range(1, upper_limit):
+    for n in range(1, upper_limit, 2):
         if is_palindrome(str(n)) and is_palindrome(convert_to_rev_b2(n)):
             solution_set.add(n)
     print(solution_set)
